@@ -1,0 +1,457 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopEase - Find your favourite products at great prices.">
+    <title>ShopEase - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="#home" class="logo">Shop<span>Ease</span></a>
+
+            <button type="button" class="menu-toggle"
+                id="menu-toggle" aria-label="Toggle navigation"
+                aria-expanded="false" aria-controls="nav-links">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#products">Products</a>
+                <a href="#reviews">Reviews</a>
+            </nav>
+
+            <button type="button" class="cart-link" id="open-cart">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- Cart Panel -->
+    <section class="cart-panel" id="cart-panel" hidden>
+        <div class="cart-header">
+            <h2>Your Shopping Cart</h2>
+            <button type="button" id="close-cart" aria-label="Close cart">
+                ✕
+            </button>
+        </div>
+
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <div class="cart-summary">
+            <h3>Total: ₹<span id="cart-total">0.00</span></h3>
+            <button type="button" id="clear-cart">Clear Cart</button>
+        </div>
+
+        <p id="cart-status" role="status" aria-live="polite"></p>
+    </section>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+
+            <div class="hero-text">
+                <p class="subtitle">WELCOME TO SHOPEASE</p>
+
+                <h1>Find Your Favourite Products Here</h1>
+
+                <p>
+                    Discover quality products at great prices.
+                    Explore our collection and enjoy easy shopping.
+                </p>
+
+                <a href="#products" class="btn">Shop Now</a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+                    alt="Welcome to ShopEase">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container benefits-grid">
+
+            <div class="benefit">
+                <span>🚚</span>
+                <div>
+                    <h3>Free Delivery</h3>
+                    <p>On eligible orders</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <span>🔒</span>
+                <div>
+                    <h3>Secure Shopping</h3>
+                    <p>Simple shopping experience</p>
+                </div>
+            </div>
+
+            <div class="benefit">
+                <span>💬</span>
+                <div>
+                    <h3>Customer Support</h3>
+                    <p>Here to help you</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="subtitle">EXPLORE OUR STORE</p>
+                <h2>Shop by Category</h2>
+                <p>Find products for your everyday needs.</p>
+            </div>
+
+            <div class="category-grid">
+
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Electronics">
+                    <h3>Electronics</h3>
+                </div>
+
+                <div class="category-card">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1664202526559-e21e9c0fb46a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Fashion">
+                    <h3>Fashion</h3>
+                </div>
+
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/3/www.madebyvadim.com.jpg?q=80&w=1182&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Accessories">
+                    <h3>Accessories</h3>
+                </div>
+
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1617228133035-2347f159e755?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Home and Living">
+                    <h3>Home & Living</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Featured Products -->
+    <section class="section products-section" id="products">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="subtitle">OUR COLLECTION</p>
+                <h2>Featured Products</h2>
+                <p>Discover products selected for you.</p>
+            </div>
+
+            <!-- Search -->
+            <div class="search-box">
+                <label for="product-search">Search Products</label>
+
+                <input
+                    type="search"
+                    id="product-search"
+                    placeholder="Search products..."
+                    autocomplete="off">
+            </div>
+
+            <p id="no-results" class="no-results" role="status" hidden>
+                No products found. Try another search.
+            </p>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1679513691474-73102089c117?q=80&w=1113&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Wireless headphones">
+
+                    <div class="product-info">
+                        <p class="product-category">Electronics</p>
+                        <h3>Wireless Headphones</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹1499</p>
+                            <p class="rating">★ 4.5</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1632794716789-42d9995fb5b6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Smartwatch">
+
+                    <div class="product-info">
+                        <p class="product-category">Electronics</p>
+                        <h3>Smartwatch</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹1999</p>
+                            <p class="rating">★ 4.3</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1622560481156-01fc7e1693e6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Everyday backpack">
+
+                    <div class="product-info">
+                        <p class="product-category">Accessories</p>
+                        <h3>Everyday Backpack</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹899</p>
+                            <p class="rating">★ 4.4</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80"
+                        alt="Casual shoes">
+
+                    <div class="product-info">
+                        <p class="product-category">Fashion</p>
+                        <h3>Casual Shoes</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹1299</p>
+                            <p class="rating">★ 4.6</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1723780808432-357c758ade35?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Cotton T-shirt">
+
+                    <div class="product-info">
+                        <p class="product-category">Fashion</p>
+                        <h3>Cotton T-Shirt</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹499</p>
+                            <p class="rating">★ 4.2</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1683543124615-fb42e42c6201?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Computer keyboard">
+
+                    <div class="product-info">
+                        <p class="product-category">Electronics</p>
+                        <h3>Computer Keyboard</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹799</p>
+                            <p class="rating">★ 4.4</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1788375077205-76daee0b1e51?q=80&w=1059&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Reusable water bottle">
+
+                    <div class="product-info">
+                        <p class="product-category">Home & Living</p>
+                        <h3>Water Bottle</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹299</p>
+                            <p class="rating">★ 4.1</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1601642964568-1917224f4e4d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
+                        alt="Study desk lamp">
+
+                    <div class="product-info">
+                        <p class="product-category">Home & Living</p>
+                        <h3>Study Desk Lamp</h3>
+
+                        <div class="product-bottom">
+                            <p class="price">₹699</p>
+                            <p class="rating">★ 4.5</p>
+                        </div>
+
+                        <button type="button" class="add-to-cart">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <p id="cart-message" class="cart-message"
+                role="status" aria-live="polite"></p>
+
+        </div>
+    </section>
+
+
+    <!-- Special Offer -->
+    <section class="offer-section">
+        <div class="container offer-content">
+
+            <div>
+                <p class="subtitle">SPECIAL OFFER</p>
+                <h2>Discover Something New</h2>
+                <p>Explore our collection and find your next favourite item.</p>
+            </div>
+
+            <a href="#products" class="btn offer-btn">
+                Explore Products
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- Customer Reviews -->
+    <section class="section" id="reviews">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="subtitle">CUSTOMER FEEDBACK</p>
+                <h2>What Customers Say</h2>
+                <p>Sample reviews from our shopping community.</p>
+            </div>
+
+            <div class="review-grid">
+
+                <div class="review-card">
+                    <p class="rating">★★★★★</p>
+                    <p>Easy to browse and a clean shopping experience.</p>
+                    <h3>Rahul</h3>
+                </div>
+
+                <div class="review-card">
+                    <p class="rating">★★★★★</p>
+                    <p>The product categories make browsing simple.</p>
+                    <h3>Priya</h3>
+                </div>
+
+                <div class="review-card">
+                    <p class="rating">★★★★☆</p>
+                    <p>The website is simple and easy to use.</p>
+                    <h3>Aman</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <a href="#home" class="logo">Shop<span>Ease</span></a>
+                    <p>Your simple online shopping destination.</p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#products">Products</a>
+                    <a href="#reviews">Reviews</a>
+                </div>
+
+            </div>
+
+            <p class="copyright">
+                &copy; 2026 ShopEase. All rights reserved.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
